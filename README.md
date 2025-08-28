@@ -1,2 +1,125 @@
 # Hashira_1st_Round
 Solution for Round 1
+
+# Catalog Placements Assignment - Online
+
+**Duration:** 40 mins
+
+**Testing Environment/IDE:** Use any IDE or environment you are comfortable with
+
+**Language:** Any language except **Python** is allowed
+
+**Submission:** Push the code to github and provide the link in submission [form](https://forms.office.com/r/cNrsKcELh8) along with output.
+
+You need to read the input from the test cases provided in JSON format.
+
+### Sample Test Case:
+
+```json
+{
+    "keys": {
+        "n": 4,
+        "k": 3
+    },
+    "1": {
+        "base": "10",
+        "value": "4"
+    },
+    "2": {
+        "base": "2",
+        "value": "111"
+    },
+    "3": {
+        "base": "10",
+        "value": "12"
+    },
+    "6": {
+        "base": "4",
+        "value": "213"
+    }
+}
+```
+
+**n:** The number of roots provided in the given JSON
+**k:** The minimum number of roots required to solve for the coefficients of the polynomial
+k = m + 1, where m is the degree of the polynomial
+
+### Root Format Example:
+
+```json
+"2": {
+    "base": "2",
+    "value": "111"
+}
+```
+
+Consider the above root as (x, y):
+
+- x is the key of the object (in this case, x = 2)
+- y value is encoded with a given base
+- Decode y value: 111 in base 2 is 7
+- Therefore, x = 2 and y = 7
+
+### Assignment Checkpoints:
+
+- **1. Read the Test Case (Input) from a  separate JSON file**
+    - Parse and read the input provided in JSON format from a separate file, which contains a series of polynomial roots
+- **2. Decode the Y Values**
+    - Correctly decode the Y values that are encoded using different bases
+- **3. Find the Secret (C)**
+    - Calculate the secret c using the decoded Y values and any known method
+
+**Hint:** Although you can't test your code against the test case in a testing environment, you can double-check it manually by solving the polynomial on paper and comparing the outputs.
+
+Good luck!
+
+Find the second testcase here.
+
+```json
+{
+"keys": {
+    "n": 10,
+    "k": 7
+  },
+  "1": {
+    "base": "6",
+    "value": "13444211440455345511"
+  },
+  "2": {
+    "base": "15",
+    "value": "aed7015a346d63"
+  },
+  "3": {
+    "base": "15",
+    "value": "6aeeb69631c227c"
+  },
+  "4": {
+    "base": "16",
+    "value": "e1b5e05623d881f"
+  },
+  "5": {
+    "base": "8",
+    "value": "316034514573652620673"
+  },
+  "6": {
+    "base": "3",
+    "value": "2122212201122002221120200210011020220200"
+  },
+  "7": {
+    "base": "3",
+    "value": "20120221122211000100210021102001201112121"
+  },
+  "8": {
+    "base": "6",
+    "value": "20220554335330240002224253"
+  },
+  "9": {
+    "base": "12",
+    "value": "45153788322a1255483"
+  },
+  "10": {
+    "base": "7",
+    "value": "1101613130313526312514143"
+  }
+}
+```
